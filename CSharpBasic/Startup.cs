@@ -54,7 +54,7 @@ namespace CSharpBasic
                     
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "api/{controller=WhereAmI}/{action=Index}/{id?}");
+                    pattern: "api/{controller=WhereAmI}/{action=Index}");
             });
             
         }

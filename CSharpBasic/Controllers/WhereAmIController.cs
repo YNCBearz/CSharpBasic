@@ -12,9 +12,18 @@ namespace CSharpBasic.Controllers
             return new JsonResult(data);
         }
 
+        [HttpGet]
         public JsonResult Info()
         {
             var data = new {name="Bear"};
+            return new JsonResult(data);
+        }
+
+        [HttpPost, ActionName("Info")]
+        public JsonResult InfoPost()
+        {
+            string text = Request.Form["text"];
+            var data = new {Age=22, Text=$"{text}"};
             return new JsonResult(data);
         }
     }
