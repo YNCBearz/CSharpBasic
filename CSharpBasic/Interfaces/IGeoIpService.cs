@@ -1,7 +1,9 @@
-﻿namespace CSharpBasic.Interfaces
+﻿using System.Threading.Tasks;
+
+namespace CSharpBasic.Interfaces
 {
     public interface IGeoIpService
     {
-        public object GetData();
+        object GetData();
     }
 }

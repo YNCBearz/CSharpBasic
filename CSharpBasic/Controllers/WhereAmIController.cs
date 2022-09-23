@@ -21,10 +21,10 @@ namespace CSharpBasic.Controllers
         }
 
         [HttpGet]
-        public JsonResult Info()
+        public object Info()
         {
             var data = new {name="Bear"};
-            return new JsonResult(data);
+            return data;
         }
 
         //TODO: Q1. how to get data when Content-Type: application/json 

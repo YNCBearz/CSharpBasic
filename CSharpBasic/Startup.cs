@@ -28,6 +28,7 @@ namespace CSharpBasic
             services.AddControllersWithViews();
             
             services.AddTransient<IGeoIpService, GeoIpService>();
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
