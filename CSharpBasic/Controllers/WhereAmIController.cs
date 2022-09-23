@@ -27,7 +27,7 @@ namespace CSharpBasic.Controllers
             return new JsonResult(data);
         }
 
-        //TODO: how to get data when Content-Type: application/json 
+        //TODO: Q1. how to get data when Content-Type: application/json 
         [HttpPost, ActionName("Info")]
         public JsonResult InfoPost()
         {
