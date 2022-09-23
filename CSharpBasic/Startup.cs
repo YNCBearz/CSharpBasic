@@ -27,7 +27,6 @@ namespace CSharpBasic
         {
             services.AddControllersWithViews();
             
-            //TODO: Q2. Singleton vs Scoped ?
             services.AddTransient<IGeoIpService, GeoIpService>();
         }
 
