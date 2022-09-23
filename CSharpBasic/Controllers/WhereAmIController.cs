@@ -1,14 +1,22 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CSharpBasic.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CSharpBasic.Controllers
 {
     public class WhereAmIController : Controller
     {
+        private readonly IGeoIpService _geoIpService;
+
+        public WhereAmIController(IGeoIpService geoIpService)
+        {
+            _geoIpService = geoIpService;
+        }
+        
         // GET
         public JsonResult Index()
         {
-            var data = new {color="black"};
+            var data = _geoIpService.GetData();
             return new JsonResult(data);
         }
 
